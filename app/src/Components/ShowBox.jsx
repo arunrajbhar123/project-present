@@ -10,7 +10,7 @@ const ShowBox = ({ data, status }) => {
   const navigate = useNavigate();
   const HandleFavorite = (data_id) => {
     axios
-      .post("http://localhost:8080/getdata/favorite", data_id)
+      .post("https://projectpresent.vercel.app/favorite", data_id)
       .then((res) => {
         console.log(res.data);
       })

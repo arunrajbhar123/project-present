@@ -11,13 +11,12 @@ import {
   Button,
   Grid,
 } from "@chakra-ui/react";
-
-import { useLocation, useSearchParams } from "react-router-dom";
+import {  useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { HouseContext } from "./../ContextApi/ContextProvides";
 
 export const SearchBox = () => {
-  const location = useLocation();
+ 
 
   return (
     <Box py={["1rem", "2rem", "2rem"]}>
@@ -84,7 +83,7 @@ const FilterSearch = () => {
     if (clickDisable) {
       if (reset) {
         axios
-          .post(`http://localhost:8080/getdata/?page=1`, payload)
+          .post(`https://projectpresent.vercel.app/getdata/?page=1`, payload)
           .then((res) => {
             setData(res.data);
           })
@@ -93,7 +92,7 @@ const FilterSearch = () => {
           });
       } else {
         axios
-          .post(`http://localhost:8080/getdata/?page=${page}`, payload)
+          .post(`https://projectpresent.vercel.app/getdata/?page=${page}`, payload)
           .then((res) => {
             setData([...data, ...res.data]);
           })

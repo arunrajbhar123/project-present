@@ -1,6 +1,6 @@
 import ShowBox from "./../Components/ShowBox";
-import { useEffect, useState, useContext } from "react";
-import axios from "axios";
+import { useEffect,  useContext } from "react";
+
 import { HouseContext } from "./../ContextApi/ContextProvides";
 
 const Buy = () => {

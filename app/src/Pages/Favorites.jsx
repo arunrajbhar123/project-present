@@ -7,7 +7,7 @@ const Favorites = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/getdata/favorite")
+      .get("https://projectpresent.vercel.app/getdata/favorite")
       .then((res) => {
         setData(res.data);
       })
